@@ -7,9 +7,9 @@ st.title("🌾 Crop Yield Prediction App")
 
 # --- Load trained model and required files ---
 try:
-    model = pickle.load(open("model.pkl", "rb"))
-    scaler = pickle.load(open("scaler.pkl", "rb"))
-    features = pickle.load(open("features.pkl", "rb"))  # <- this replaces 'columns'
+    model = pickle.load(open('model_compressed.pkl', 'rb'))
+    scaler = pickle.load(open('scaler.pkl', 'rb'))
+    features = pickle.load(open('features.pkl', 'rb'))
     st.success("✅ Model, Scaler, and Features loaded successfully!")
 except Exception as e:
     st.error(f"⚠️ Error loading model files: {e}")
